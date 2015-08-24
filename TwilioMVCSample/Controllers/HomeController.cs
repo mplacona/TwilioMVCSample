@@ -9,10 +9,10 @@ namespace TwilioMVCSample.Controllers
         // GET: Home
         public ActionResult Index()
         {
-            string AccountSid = "mySID";
-            string AuthToken = "myAuth";
+            const string accountSid = "mySID";
+            const string authToken = "myAuth";
 
-            var twilio = new TwilioRestClient(AccountSid, AuthToken);
+            var twilio = new TwilioRestClient(accountSid, authToken);
             return Content(twilio.ApiVersion);
         }
     }
